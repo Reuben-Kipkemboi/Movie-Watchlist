@@ -27,6 +27,7 @@ def get_movies(category):
 
 
     return movie_results
+
 def process_results(movie_list):
     '''
     Function  that processes the movie result and transform them to a list of Objects
