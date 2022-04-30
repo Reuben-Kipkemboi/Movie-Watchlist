@@ -1,16 +1,28 @@
+from ensurepip import bootstrap
 from flask import Flask
-from .config import DevConfig
 from flask_bootstrap import Bootstrap
+from config import config_options
 
-# Initializing application
-app = Flask (__name__, instance_relative_config = True)
-# setting up configuration
-app.config.from_object(DevConfig)
+bootstrap= Bootstrap()
 
-app.config.from_pyfile('config.py') #connects to the config.py file and all its contents are appended to the app.config
+def create_app(config_name):
+    app = Flask(__name__)
 
-# Initializing Flask Extensions
-bootstrap = Bootstrap(app)
+    # Creating the app configurations
+    app.config.from_object(config_options[config_name])
 
-from app import views
-from app import error
+    # Initializing flask extensions
+    bootstrap.init_app(app)
+    
+     # Registering the blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+
+    # setting config
+    from .request import configure_request
+    configure_request(app)
+
+    # Will add the views and forms
+
+    return app
+
