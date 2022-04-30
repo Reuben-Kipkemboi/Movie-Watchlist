@@ -1,16 +1,7 @@
-from app import app
-
+# from app import app   
 import urllib.request,json
-from .models import movie
+from .models import Movie
 
-
-# Movie = movie.Movie
-# #getting our API key
-# api_key = app.config["MOVIE_API_KEY"]
-
-# # Getting the movie base URL
-# base_url = app.config["MOVIE_API_BASE_URL"]
-# Getting api key
 api_key = None
 # Getting the movie base url
 base_url = None
@@ -36,8 +27,9 @@ def get_movies(category):
             movie_results_list = get_movies_response['results']
             movie_results = process_results(movie_results_list)
 
-
     return movie_results
+
+#process results
 
 def process_results(movie_list):
     '''

@@ -1,4 +1,3 @@
-from ensurepip import bootstrap
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options
@@ -19,7 +18,7 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     # setting config
-    from .request import configure_request
+    from .requests import configure_request
     configure_request(app)
 
     # Will add the views and forms
