@@ -13,3 +13,4 @@ app.config.from_pyfile('config.py') #connects to the config.py file and all its 
 bootstrap = Bootstrap(app)
 
 from app import views
+from app import error
