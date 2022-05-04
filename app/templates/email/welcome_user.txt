@@ -1,0 +1,4 @@
+Hello {{user.username}}, Thank you for taking your time.
+Welcome to Movie-Watchlist
+We have just seen you've signed up for our application. Welcome you to Movie family. 
+Please enjoy the reviews of all your  favourite films.Once again, Welcome....
