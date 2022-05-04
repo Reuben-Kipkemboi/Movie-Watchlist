@@ -1,46 +1,59 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
-<!-- {% import 'macros.html' as macro%} -->
+
+<!-- Styles block -->
+
 {% block styles%}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 <!-- Content block -->
 {% block content %}
 
 <div class="container">
+
+  {% if current_user.is_authenticated%}
+    <h1>Hello {{current_user.username}}</h1>
+  {% else %}
+    <h1>Hello stranger</h1>
+  {%endif%}
     <form>
         <input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control">
         <br>
-        <button type="submit" value="Submit" class="btn btn-outline-info">SEARCH</button>
+        <input type="submit"  value="Submit" class="btn btn-info btn-block fs-2">
     </form>
 
 </div>
-<div class="container-fluid bg-light">
+
+<div class="container">
+
+    <!-- Popular movie -->
     <div class="row">
-        <!-- Popular movie -->
-        <h3 class="text-center text-danger" id="h1"> Popular Movies</h3>
+        <h3 class="text-center fs-2 text-danger fw-bold" id="h1"> Popular Movies</h3>
         <ul>
             {{ macro.displayMovieList(popular)}}
         </ul>
     </div>
+    <!-- Upcoming movie  -->
     <div class="row">
-        <!-- Upcoming movie  -->
 
-        <h3 class="text-center text-danger" id="h2"> Upcoming Movies </h3>
+        <h3 class="text-center fs-2 text-Primary fw-bold" id="h2"> Upcoming Movies </h3>
         <ul>
             {{ macro.displayMovieList(upcoming)}}
         </ul>
     </div>
 
+    <!-- Now showing movie -->
     <div class="row">
-        <!-- Now showing movie -->
-        <h3 class="text-center text-info" id="h3">Now Showing</h3>
+
+        <h3 class="text-center fs-2 text-info" id="h3">Now Showing</h3>
         <ul>
             {{ macro.displayMovieList(now_showing)}}
         </ul>
     </div>
+
 </div>
+
 
 
 {% endblock%}

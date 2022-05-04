@@ -3,8 +3,9 @@
 #h3{
     font-weight: 700;
     font-size: 7vh;
+    color: rgb(10, 13, 44);
 }
 
-.bg-light .row ul{
+.row ul{
     list-style-type: none;
 }
