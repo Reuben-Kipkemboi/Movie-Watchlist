@@ -39,6 +39,7 @@ def search(movie_name):
     title = f'search results for {movie_name}'
     return render_template('search.html', title=title, movies=searched_movies)
 @main.route('/movie/review/new/<int:id>', methods = ['GET','POST'])
+@login_required  # Ensures review is only available to authenticated users'
 def new_review(id):
     form = ReviewForm() 
     movie = get_movie(id)

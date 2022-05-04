@@ -1,5 +1,9 @@
 from . import db #
 from werkzeug.security import generate_password_hash,check_password_hash # hashing password
+from flask_login import UserMixin
+from . import login_manager
+
+
 class Movie:
     '''
     Movie class to define Movie Objects
@@ -47,12 +51,13 @@ class Review:
     
     
 #defining a class that we will use in our database 
-class User(db.Model):
+class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255))
+    email = db.Column(db.String(255),unique = True,index = True)
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id')) #will help us link the two tables/models
-    pass_secure = db.Column(db.String(255))# holding our passwords
+    password_hash = db.Column(db.String(255))# holding our passwords
     @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
@@ -67,6 +72,12 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+    
+    
+    
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
     
  #User roles   
 class Role(db.Model):
