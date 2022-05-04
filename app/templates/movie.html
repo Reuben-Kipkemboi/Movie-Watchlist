@@ -11,14 +11,14 @@
     <!-- Poster background -->
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath"
-            style="background: url({{movie.poster}}) no-repeat center center; height:300px;">
+            style="background: url({{movie.poster}}) no-repeat center center; height:300px;" id="poster">
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <h3>{{ movie.title }}</h3>
+            <h3 class="text-center" id="title">{{ movie.title }}</h3>
 
-            <p class="overview"> {{ movie.overview }}</p>
-            <p class="ratings"> <b> {{ movie.vote_average }}</b> - <b><i class="text-success">{{ movie.vote_count}}
+            <p class="overview" id="overview"> {{ movie.overview }}</p>
+            <p class="ratings " id="ratings"> <b> {{ movie.vote_average }}</b> - <b><i class="text-success">{{ movie.vote_count}}
                         votes </i></b> </p>
 
 
@@ -37,7 +37,7 @@
         {% else%}
         <h3 class="text-center">This movie has no reviews </h3>
 
-        <a class="btn btn-success btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
+        <a class="btn btn-lg text-center" id="review-btn" href="/movie/review/new/{{movie.id}}"> Write Your Review</a>
         {% endif %}
 
     </div>

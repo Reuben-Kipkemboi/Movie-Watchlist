@@ -9,3 +9,31 @@
 .row ul{
     list-style-type: none;
 }
+#title{
+    font-weight: bold;
+    color: rgb(10, 13, 44);
+    border-bottom: 2px solid rgb(10, 13, 44) ;
+   
+}
+#title, #overview{
+    margin-bottom: 3%;   
+}
+#overview{
+    font-size: 3vh;
+    line-height: 1.6;
+}
+#review-btn{
+    background-image:
+    linear-gradient(to right,rgb(66, 18, 37), rgb(10, 13, 44));
+    color: #ffffff;
+}
+#poster{
+    /* box-shadow: 0 4px 8px 0; */
+    border-left: 2px solid rgb(66, 18, 37);
+
+}
+#ratings{
+    text-align: center;
+    font-size: 2.5vh;
+    font-style: italic;
+}
