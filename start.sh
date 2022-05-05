@@ -4,5 +4,4 @@ export SECRET_KEY='pure pure secret'
 
 export MAIL_USERNAME=kipkemboireuben866@gmail.com
 export MAIL_PASSWORD=Moringa2022
-
 python3.8 manage.py server

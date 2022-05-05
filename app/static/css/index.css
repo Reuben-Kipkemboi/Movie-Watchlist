@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+*{
+    font-family: 'Courgette', cursive;
+}
 #h1,
 #h2,
 #h3{
@@ -42,7 +46,7 @@
 #nav{
     background-color: rgb(10, 13, 44);
 }
-#nav1, #nav2, #nav3, #nav4{
+#nav1, #nav2, #nav3, #nav4, #nav5{
     font-size: 3.5vh;
     color: #ffffff;
     font-weight: bold;

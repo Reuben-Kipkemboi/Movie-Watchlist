@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +32,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           {% if current_user.is_authenticated %}
-          <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+          <li><a href="{{url_for('main.profile',uname=current_user.username)}}" id="nav5"><i class="fa-solid fa-user"></i> Profile</a></li>
           <li><a href="{{url_for('auth.logout')}}" id="nav3">Sign out</a></li>
           {% else %}
           <li><a href="{{url_for('auth.login')}}" id="nav4"><i class="fa-solid fa-user-lock"></i> Sign in</a></li>

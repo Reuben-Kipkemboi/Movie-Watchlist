@@ -2,7 +2,7 @@ from flask import render_template,request,redirect,url_for,abort
 from . import main
 from ..requests import get_movies,get_movie,search_movie
 from .forms import ReviewForm,UpdateProfile
-from ..models import Review,User,PhotoProfile
+from ..models import Review,User
 from flask_login import login_required
 from .. import db,photos
 
@@ -54,7 +54,7 @@ def search(movie_name):
     title = f'search results for {movie_name}'
     return render_template('search.html',movies = searched_movies)
 
-
+#Movie Reviews
 @main.route('/movie/review/new/<int:id>', methods = ['GET','POST'])
 @login_required
 def new_review(id):
@@ -115,6 +115,5 @@ def update_pic(uname):
         filename = photos.save(request.files['photo'])
         path = f'photos/{filename}'
         user.profile_pic_path = path
-        user_photo = PhotoProfile(pic_path = path,user = user)
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
