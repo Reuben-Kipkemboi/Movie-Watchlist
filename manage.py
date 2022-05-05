@@ -1,8 +1,13 @@
 from app import create_app,db
 from flask_script import Manager,Server
-from app.models import User,Role
+from app.models import User,Role,Review
 from  flask_migrate import Migrate, MigrateCommand
-# Creating app instance
+    """_summary_
+    """    """_summary_
+
+    Returns:
+        _type_: _description_
+    """# Creating app instance
 app = create_app('development')
 
 manager = Manager(app)
