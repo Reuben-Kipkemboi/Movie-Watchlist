@@ -29,9 +29,9 @@
         <ul class="nav navbar-nav navbar-right">
           {% if current_user.is_authenticated %}
           <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-          <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+          <li><a href="{{url_for('auth.logout')}}" id="nav3">Sign out</a></li>
           {% else %}
-          <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+          <li><a href="{{url_for('auth.login')}}" id="nav4"><i class="fa-solid fa-user-lock"></i> Sign in</a></li>
           {%endif%}
         </ul>
       </div>
