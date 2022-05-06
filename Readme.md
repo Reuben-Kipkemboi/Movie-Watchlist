@@ -51,7 +51,7 @@ This Application is composed of the following modules;
 
 ![search Results Page](./app/static/images/searchresults.png)
 
-##### Movie description section
+##### Review description section
 
 ![Review menu Page](./app/static/images/Reviewmenu.png)
 
