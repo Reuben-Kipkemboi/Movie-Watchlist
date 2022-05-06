@@ -95,3 +95,8 @@ chmod a+x start.sh
 * Slack - [Reuben Kipkemboi]()
 
 * Email - [Reuben Kipkemboi](https://gmail.com) :email: 
+
+
+<p align = "center">
+    &copy; 2022 @ Reuben Kipkemboi.
+</p>
