@@ -120,7 +120,7 @@ def update_pic(uname):
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
 
-# a view to ahandle change of markdown to readable html
+# a view to handle change of markdown to readable html
 @main.route('/review/<int:id>')
 def single_review(id):
     review=Review.query.get(id)
