@@ -1,1 +1,6 @@
 {% extends 'bootstrap/base.html'%}
+{%block styles %}
+{{super()}}
+ <!-- Css styling ...try it in our base html ===likely to work -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}

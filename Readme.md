@@ -21,7 +21,43 @@
 
 A movie review website using <mark>flask</mark>. The web application will allow a <mark>user to find a movie, add a review to the movie and also add comments to reviews.</mark>
 
-[Go Back to the top](#movie-list)
+This Application is composed of the following modules;
+
+##### Home page
+
+![Home Page](./app/static/images/home.png)
+
+##### Login page
+
+![Login Page](./app/static/images/login.png)
+
+##### Register module
+
+![Register Page](./app/static/images/register.png)
+
+##### Movie description section
+
+![Movie Description Page](./app/static/images/MovieDesc.png)
+
+##### User profile
+
+![Profile Page image](./app/static/images/profile.png)
+
+##### Movie-Review module
+
+![Review Page image](./app/static/images/review.png)
+
+##### Search Results
+
+![search Results Page](./app/static/images/searchresults.png)
+
+##### Movie description section
+
+![Review menu Page](./app/static/images/Reviewmenu.png)
+
+
+
+[Go Back to the top](#movie-watchlist)
 
 
 ## Installation Requirements
@@ -75,7 +111,7 @@ chmod a+x start.sh
 
 ```
 
-[Go Back to the top](#movie-list)
+[Go Back to the top](#movie-watchlist)
 
 
 ## Technologies Used
