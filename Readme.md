@@ -19,7 +19,7 @@
 
 ## User Stories
 
-A movie review website using ==flask==. The web application will allow a ==user to find a movie, add a review to the movie and also add comments to reviews.==
+A movie review website using <mark>flask</mark>. The web application will allow a <mark>user to find a movie, add a review to the movie and also add comments to reviews.</mark>
 
 [Go Back to the top](#movie-list)
 
@@ -37,7 +37,7 @@ A movie review website using ==flask==. The web application will allow a ==user 
 
 1) Git clone the repository to your local computer
 ```
-https://github.com/Reuben-Kipkemboi/News-API.git
+https://github.com/Reuben-Kipkemboi/Movie-Watchlist.git
 ```
 2. change Directory `cd` into News-Api
 
