@@ -1,5 +1,14 @@
 {% extends 'bootstrap/base.html'%}
 
+{%block styles %}
+  {{super()}}
+  <!--Importing the simple mde css and js files  -->
+  {{ simplemde.css}}
+  {{ simplemde.js }}
+    <!-- Css styling ...try it in our base html ===likely to work -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 
 <!-- Navbar block  --> 
 {% block navbar %}
